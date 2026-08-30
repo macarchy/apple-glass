@@ -100,11 +100,15 @@ hl.config({
 o.window({ tag = "default-opacity" }, { opacity = "0.90 0.82" })
 
 -- Terminals carry their glass in the terminal itself (window.opacity in this
--- theme's alacritty.toml, alpha in its foot.ini): the background is
+-- theme's alacritty.toml, alpha in its foot.ini, background_opacity in its kitty.conf): the background is
 -- translucent but glyphs stay at full alpha. So the compositor must NOT also
 -- dim the surface, or the text fades along with it. Keep a whisper of dimming
 -- on unfocused terminals. org.omarchy.agent is foot too (the Claude window).
-o.window({ class = "^(Alacritty|foot|footclient|org\\.omarchy\\.agent)$" }, { opacity = "1.0 0.95" })
+-- no_blur keeps the aquarium crisp behind the glass: foot skips compositor
+-- blur anyway (it hints its surface opaque), which is where this look comes
+-- from; kitty declares real alpha, so without this rule the 20/4 material
+-- frosts its backdrop into a featureless slab that reads as an opaque window.
+o.window({ class = "^(Alacritty|foot|footclient|kitty|org\\.omarchy\\.agent)$" }, { opacity = "1.0 0.95", no_blur = true })
 
 -- Shell surfaces. These are layer-shell, not windows, so they need blur turned
 -- on per namespace. Listed explicitly: omarchy-background must NOT be blurred
