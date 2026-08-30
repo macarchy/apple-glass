@@ -119,6 +119,8 @@ local glass_surfaces = table.concat({
   "omarchy-bar",
   "omarchy-menu",
   "omarchy-notifications",
+  -- Notification center sidebar (phmatray.notification-center shell plugin).
+  "phmatray-notification-center",
   "omarchy-osd",
   "omarchy-polkit",
   "omarchy-reminders",
@@ -130,6 +132,8 @@ local glass_surfaces = table.concat({
   "omarchy-network-speedtest",
   "omarchy-disk-speedtest",
   "omarchy-speed-test",
+  -- The Cmd+Tab app switcher (macarchy.switcher shell plugin).
+  "macarchy-switcher",
   -- The dock, when one is running. Harmless when it is not.
   "nwg-dock",
 }, "|")
