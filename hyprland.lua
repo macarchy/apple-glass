@@ -121,6 +121,8 @@ local glass_surfaces = table.concat({
   "omarchy-notifications",
   -- Notification center sidebar (phmatray.notification-center shell plugin).
   "phmatray-notification-center",
+  -- Control center sidebar (macarchy.control-center shell plugin).
+  "macarchy-control-center",
   "omarchy-osd",
   "omarchy-polkit",
   "omarchy-reminders",
