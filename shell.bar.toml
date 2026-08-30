@@ -1,0 +1,10 @@
+[bar]
+# The menu bar as a sheet of glass over the wallpaper. Hyprland blurs what is
+# behind it (see this theme's hyprland.lua); this alpha is what lets it through.
+background       = "#1d1d1f"
+background-alpha = 0.55
+text             = "#f5f5f7"
+active           = "#ff453a"
+scale-with-font  = true
+size-horizontal  = 28
+size-vertical    = 30

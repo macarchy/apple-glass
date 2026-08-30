@@ -1,0 +1,40 @@
+# Apple Glass — macOS dark-mode system palette (SF / Sequoia semantic colors)
+# adapted to Omarchy. Neutral graphite surfaces so translucency reads as
+# glass rather than as a tint, with Apple's dark-mode system accents.
+
+mode = "dark"
+
+accent = "#0a84ff"
+selection = "#3a3a3c"
+muted = "#636366"
+
+background = "#1d1d1f"
+dark_background = "#141416"
+darker_background = "#0b0b0d"
+lighter_background = "#2c2c2e"
+
+foreground = "#f5f5f7"
+dark_foreground = "#8e8e93"
+light_foreground = "#d1d1d6"
+bright_foreground = "#ffffff"
+
+red = "#ff453a"
+yellow = "#ffd60a"
+orange = "#ff9f0a"
+green = "#32d74b"
+cyan = "#64d2ff"
+blue = "#0a84ff"
+magenta = "#bf5af2"
+brown = "#ac8e68"
+
+bright_red = "#ff6961"
+bright_yellow = "#ffe066"
+bright_green = "#5ce65c"
+bright_cyan = "#8be0ff"
+bright_blue = "#409cff"
+bright_magenta = "#da8fff"
+
+# The rim-light on a pane of glass: a bright edge fading to nearly nothing.
+# The Omarchy shell derives popup, notification, and menu borders from this.
+hyprland_active_border = "rgba(ffffffcc) rgba(ffffff40) 135deg"
+hyprland_inactive_border = "rgba(ffffff1f)"

@@ -1,0 +1,52 @@
+[colors.primary]
+background = "#1d1d1f"
+foreground = "#f5f5f7"
+
+[colors.cursor]
+text = "#1d1d1f"
+cursor = "#ffffff"
+
+[colors.vi_mode_cursor]
+text = "#1d1d1f"
+cursor = "#ffffff"
+
+[colors.search.matches]
+foreground = "#1d1d1f"
+background = "#ffd60a"
+
+[colors.search.focused_match]
+foreground = "#1d1d1f"
+background = "#ff453a"
+
+[colors.footer_bar]
+foreground = "#1d1d1f"
+background = "#f5f5f7"
+
+[colors.selection]
+text = "#ffffff"
+background = "#3a3a3c"
+
+[colors.normal]
+black = "#1d1d1f"
+red = "#ff453a"
+green = "#32d74b"
+yellow = "#ffd60a"
+blue = "#0a84ff"
+magenta = "#bf5af2"
+cyan = "#64d2ff"
+white = "#f5f5f7"
+
+[colors.bright]
+black = "#636366"
+red = "#ff6961"
+green = "#5ce65c"
+yellow = "#ffe066"
+blue = "#409cff"
+magenta = "#da8fff"
+cyan = "#8be0ff"
+white = "#ffffff"
+
+# Glass: the background alpha is the terminal-side half of the material --
+# Hyprland blurs whatever shows through (ignore_opacity), text stays opaque.
+[window]
+opacity = 0.58

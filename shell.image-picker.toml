@@ -1,0 +1,10 @@
+[image-picker]
+# The background carousel. Selected slice gets the system-blue ring; the rest
+# keep a faint white edge so they read as slides rather than as buttons.
+scrim                   = "#0b0b0d"
+scrim-alpha             = 0.45
+text                    = "#f5f5f7"
+selected-border         = "#0a84ff"
+selected-border-alpha   = 1.0
+unselected-border       = "#ffffff"
+unselected-border-alpha = 0.2
