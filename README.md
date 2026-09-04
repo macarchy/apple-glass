@@ -88,6 +88,15 @@ while the background lets light through. The compositor therefore leaves them at
 `1.0` / `0.95` and skips blurring them, which keeps the scene behind crisp
 instead of frosting it into a featureless slab.
 
+Those terminals are matched by Omarchy's own `terminal` tag
+(`default/hypr/apps/terminals.lua`) rather than a hand-written class list.
+Omarchy launches TUIs and its own terminal windows under dedicated app-ids, so
+the tag's pattern ends in `org\.omarchy\..*|TUI\..*` — every one of those is
+covered the day it appears. A spelled-out regex is not: it misses each new TUI,
+and it missed ghostty, wezterm and foot's `org.codeberg.dnkl.foot` app-id
+outright. The miss shows up as one terminal rendering as an opaque slab beside
+its glassy neighbours.
+
 ## Which surfaces are glass
 
 Shell surfaces are layer-shell, not windows, so each namespace opts in
