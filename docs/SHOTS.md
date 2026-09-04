@@ -34,14 +34,17 @@ Close anything personal first — the shots are going into a public repo.
 
 Numbers are the intended gallery order.
 
-- [ ] **01 — hero: glass over water.** Aquarium **on**. Two windows overlapping
-      by about a third: a terminal (foot or kitty, `btop` or `fastfetch`
-      running) in front, a browser or file manager behind it. Focus the
+- [x] **01 — hero: glass over water.** Aquarium **on**. A file manager and a
+      terminal (`btop`), overlapping only at the edge. Do *not* overlap them by
+      a third as this list first said: terminals are exempt from compositor
+      blur here, so a terminal laid over another window shows that window's raw
+      text through its own 0.58 alpha, and the result is mud. Keep the terminal
+      mostly over the water, where the exemption is the point. Focus the
       terminal so the front window carries the active rim light and the back one
       the dim border. Bar visible. This is the shot that has to sell the theme —
       make sure a fish or a caustic highlight is visibly *behind* the glass, not
       beside it.
-- [ ] **02 — the same frame, aquarium off.** `omarchy-aquarium-toggle off`, put
+- [x] **02 — the same frame, aquarium off.** `omarchy-aquarium-toggle off`, put
       `backgrounds/1-sequoia-dusk.jpg` up, do not move a single window, capture
       again. 01 and 02 side by side is the argument. Turn the aquarium back on
       afterwards.
@@ -56,25 +59,29 @@ Numbers are the intended gallery order.
       ```
 
       Keep it under ~5 MB so GitHub plays it inline.
-- [ ] **04 — depth stack.** Three or four terminals cascaded with visible
-      overlap, each showing different content. `blur.xray` means each pane blurs
-      to the water rather than to the pane below, so the stack should not turn
-      to mud — that is the claim this shot has to back up.
+- [ ] **04 — depth stack.** Three or four *blurred* windows cascaded with
+      visible overlap. `blur.xray` means each pane blurs to the water rather
+      than to the pane below, so the stack should not turn to mud, and that is
+      the claim this shot has to back up. Use GTK apps (files, settings, text
+      editor), **not** terminals: terminals carry `no_blur = true`, so a
+      terminal stack demonstrates nothing about xray.
 - [ ] **05 — the app launcher.** `SUPER + ALT + SPACE` (`omarchy-menu toggle
       apps`). Type a couple of characters so the list is filtered and one row
-      carries the blue selection. Windows still visible behind the scrim — the
-      scrim is only 0.42, so they should be.
+      carries the blue selection. Do not expect to recognise the windows
+      behind it: the scrim is only 0.42, but the menu layer is blurred as well,
+      and the two together reduce the desktop to a dark wash. That is correct
+      behaviour, not a bug to shoot around.
 - [ ] **06 — the Omarchy menu.** `SUPER + SPACE` (`omarchy-menu toggle`), one
       submenu deep, so the scrim, the card and the selected row are all in
       frame.
-- [ ] **07 — the bar, close up.** Crop or region-capture the top bar over a
+- [x] **07 — the bar, close up.** Crop or region-capture the top bar over a
       *busy* part of the wallpaper — that is where a 0.55-alpha surface either
       holds its text or does not.
 
       ```sh
       omarchy screenshot region save
       ```
-- [ ] **08 — a notification on glass.** Trigger one and catch it before it
+- [x] **08 — a notification on glass.** Trigger one and catch it before it
       expires:
 
       ```sh
