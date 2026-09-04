@@ -108,7 +108,14 @@ o.window({ tag = "default-opacity" }, { opacity = "0.90 0.82" })
 -- blur anyway (it hints its surface opaque), which is where this look comes
 -- from; kitty declares real alpha, so without this rule the 20/4 material
 -- frosts its backdrop into a featureless slab that reads as an opaque window.
-o.window({ class = "^(Alacritty|foot|footclient|kitty|org\\.omarchy\\.agent)$" }, { opacity = "1.0 0.95", no_blur = true })
+--
+-- Match Omarchy's own `terminal` tag (default/hypr/apps/terminals.lua), not a
+-- hand-listed class regex. Omarchy launches TUIs under per-app ids -- aikit
+-- gets org.omarchy.aikit, omarchy-launch-tui mints org.omarchy.<command> for
+-- anything else -- and a spelled-out list silently misses each new one, which
+-- shows up as one terminal rendering as an opaque slab next to its glassy
+-- neighbours. The tag already covers org.omarchy.* and TUI.*.
+o.window({ tag = "terminal" }, { opacity = "1.0 0.95", no_blur = true })
 
 -- Shell surfaces. These are layer-shell, not windows, so they need blur turned
 -- on per namespace. Listed explicitly: omarchy-background must NOT be blurred
