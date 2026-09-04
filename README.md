@@ -9,7 +9,7 @@ built from Apple's dark-mode system colors.
 The part a screenshot cannot show: **the blur was tuned against moving water.**
 Every number below was picked by A/B comparison with the
 [omarchy-aquarium](https://github.com/macarchy/omarchy-aquarium) animated
-background running underneath: a live GLSL underwater scene, not a still
+background running underneath — a live GLSL underwater scene, not a still
 wallpaper. That is why `vibrancy` came down to 0.18 (at 0.28 the panes glow
 blue over the saturated water instead of reading as neutral graphite) and why
 `noise` stays at 0.02 (static grain shimmers against a moving backdrop). The
@@ -51,7 +51,7 @@ translucency reads as glass rather than as a tint.
 | | | | `bright_blue` | `#409cff` |
 | | | | `bright_magenta` | `#da8fff` |
 
-Window borders are a rim light rather than a frame: a bright edge fading to
+Window borders are a rim light rather than a frame — a bright edge fading to
 nearly nothing across the pane:
 
 ```
@@ -68,7 +68,7 @@ outside the theme directory is touched.
 | Setting | Value | Why |
 | --- | --- | --- |
 | `blur.size` / `blur.passes` | `20` / `4` | The deep macOS-style material. 8/3 read as clear glass, 12–16/3 as light frost. The 4th pass is the only real cost; size alone is free in dual-kawase. |
-| `blur.xray` | `true` | Every pane blurs straight through to the background layer, not to the windows behind it. The whole desktop is glass over one scene, so stacked translucency stops compounding. |
+| `blur.xray` | `true` | Every pane blurs straight through to the background layer, not to the windows behind it — the whole desktop is glass over one scene, and stacked translucency stops compounding. |
 | `blur.ignore_opacity` | `true` | Apps that paint their own translucency get the material too. |
 | `blur.vibrancy` | `0.18` | Backed off from 0.28: the aquarium is already saturated, and at that level the panes picked up its blue. |
 | `blur.vibrancy_darkness` | `0.1` | |
@@ -105,7 +105,7 @@ reminders, clipboard, emoji picker, image selector, keyboard panel, network QR,
 the network / disk / speed tests, the `macarchy.switcher` Cmd+Tab switcher, the
 `phmatray.notification-center` and `macarchy.control-center` sidebars, and
 `nwg-dock` when one is running. The background layer is deliberately *not*
-blurred: it is the thing everything else blurs.
+blurred — it is the thing everything else blurs.
 
 Each surface gets its own alpha, so the stack reads as depth rather than as one
 uniform wash:
@@ -120,7 +120,7 @@ uniform wash:
 | Popups | `0.70` |
 | Tooltip / polkit | `0.72` |
 
-Controls follow Apple's dark-mode treatment: a white fill at low alpha
+Controls follow Apple's dark-mode treatment — a white fill at low alpha
 (`0.09` normal, `0.15` hover) over the blurred material rather than a filled
 box, so the pane behind still shows through. Keyboard focus is the one loud
 element: a `#0a84ff` ring at `0.9` alpha, deliberately *not* identical to hover,
