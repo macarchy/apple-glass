@@ -109,7 +109,7 @@ Numbers are the intended gallery order.
       arrangement, captured once under `Apple Glass` and once under
       `Apple Glass Light` (`omarchy theme set "Apple Glass Light"`), so the two
       READMEs can show the same desktop at 8am and at 10pm. Set the theme back
-      afterwards, or let `omarchy-auto-appearance` do it.
+      afterwards, or let `macarchy-auto-appearance` do it.
 
 ## Afterwards
 
