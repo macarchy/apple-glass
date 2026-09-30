@@ -1,3 +1,5 @@
+![apple-glass banner](.github/banner.png)
+
 # Apple Glass
 
 A macOS-inspired **dark** theme for [Omarchy](https://omarchy.org). Deep
